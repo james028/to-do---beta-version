@@ -4,6 +4,7 @@ document.getElementById("add").addEventListener("click", function() {
       
     if (value) {
         addItem(value);
+        document.getElementById("add-text").value = '';
     }
 
     //back();
