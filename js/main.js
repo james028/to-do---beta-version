@@ -93,5 +93,7 @@ function completedTasks(){
    // var parent = item.parentNode;
     
     //parent.appendChild(item);
+   var com = document.querySelector(".complete1");
+   com.style.display = "none";
 
 }
