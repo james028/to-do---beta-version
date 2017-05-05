@@ -6,10 +6,27 @@ document.getElementById("add").addEventListener("click", function() {
         addItem(value);
         document.getElementById("add-text").value = '';
     }
-
+    
     //back();
 }, false);
 
+
+
+
+// dodanie zadania po nacisnieciu klawisza enter
+document.addEventListener("keyup", function(evt) {
+    
+    if (evt.keyCode === 13) {
+        
+        var value = document.getElementById("add-text").value;  
+        if (value) {
+            addItem(value);
+            document.getElementById("add-text").value = '';
+        }
+    }
+    
+    
+}, false);
 
 
 //usuwanie elementow
@@ -21,19 +38,6 @@ function removeItem() {
 }
 
 
-//zrobione zadania
-function doneItem() {
-    var item = this.parentNode.parentNode;
-    var parent = item.parentNode;
-    var id = parent.id;
-    
-    if (id === "todolist") {
-        
-    } else {
-        
-    }
-    
-}
 
 // Dodanie nowych elementow do listy
 function addItem(text) {
@@ -64,6 +68,7 @@ function addItem(text) {
     item.appendChild(buttons); //dodanie diva buttons do listy li
     
     list.appendChild(item); //dodanie listy li do listy ul zobaczyc inne rozwiazanie
+    
 }
 
 
@@ -77,23 +82,19 @@ function back() {
     list.appendChild(create);
     
 }
-
+var tasksComplete = document.querySelector("#done");
 
 
 function completedTasks(){
 
     
-    var tasksComplete = document.querySelector("#done");
+    
     var item = this.parentNode.parentNode;
     
     
     tasksComplete.appendChild(item);
     
     
-     //var item = this.parentNode.parentNode;
-   // var parent = item.parentNode;
-    
-    //parent.appendChild(item);
    
    this.style.display = "none";
 
