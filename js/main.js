@@ -72,17 +72,18 @@ function back() {
     var list = document.getElementById("todolist");
     
     create.classList.add("active");
+    create.textContent = "elo";
     
     list.appendChild(create);
     
 }
 
-var tasksComplete = document.querySelector("#done");
+
 
 function completedTasks(){
 
     
-    
+    var tasksComplete = document.querySelector("#done");
     var item = this.parentNode.parentNode;
     
     
@@ -93,7 +94,7 @@ function completedTasks(){
    // var parent = item.parentNode;
     
     //parent.appendChild(item);
-   var com = document.querySelector(".complete1");
-   com.style.display = "none";
+   
+   this.style.display = "none";
 
 }
