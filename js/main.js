@@ -1,3 +1,9 @@
+var removeicon = '<i class="fa fa-trash-o" aria-hidden="true"></i>';
+var completeicon = '<i class="fa fa-check-circle-o" aria-hidden="true"></i>';
+
+
+
+
 document.getElementById("add").addEventListener("click", function() {
     
     var value = document.getElementById("add-text").value;  
@@ -58,19 +64,19 @@ function addItem(text) {
     item.innerText = text;
     
     var buttons = document.createElement("div"); //tworzenie elementu div
-    buttons.classList.add("buttons"); //dodanie klasy buttons do stworzonego elementu div
+    buttons.classList.add("divs"); //dodanie klasy buttons do stworzonego elementu div
     
-    var remove = document.createElement("button");// tworzenie elemnutu button
+    var remove = document.createElement("div");// tworzenie elemnutu button
     remove.classList.add("remove1"); //dodanie klasy remove do stworzonego elementu button
-    remove.innerHTML = "Usuń";
+    remove.innerHTML = removeicon;
     
     
     // wywołanie zdarzenia usuniecia elementu
     remove.addEventListener("click", removeItem);
     
-    var complete = document.createElement("button"); // tworzenie elemnutu button
+    var complete = document.createElement("div"); // tworzenie elemnutu button
     complete.classList.add("complete1");  //dodanie klasy complete do stworzonego elementu button
-    complete.innerHTML = "Skończone";
+    complete.innerHTML = completeicon;
     
     
      // wywołanie zdarzenia zrobionego zadania
