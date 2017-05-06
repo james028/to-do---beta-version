@@ -9,31 +9,40 @@
 
     <link href="css/style.css" rel="stylesheet">
 
+    
+<script src="https://use.fontawesome.com/0e46e58ec0.js"></script>
+
   </head>
   <body>
       
-      <div class="header">
-        <input type="text" placeholder="Dodaj zadanie" id="add-text">
-        <button id="add">Dodaj</button>
-      </div>
-      
-      <h3>Zadania do wykonania</h3>
-      <ul class="todolist" id="todolist">
-          <!--<li>added item
-            <div class="buttons">
-                <button id="remove" class="remove1">Remove</button>  
-                <button id="done" class="complete1">Done</button>
-            </div>
-        </li>-->
-      </ul>
+    <div class="container">
+        <div class="main-row">
+              <div class="header">
+                <input type="text" placeholder="Add a to-do..." id="add-text" class="todo-input">
+                <div  class="todo-plus">
+                    <i class="fa fa-plus" aria-hidden="true" id="add"></i>  
+                </div>
+              </div>
 
-      
-      <h3>Zadania zrobione</h3>
-      <ul class="todolist" id="done">
-        <!--<li>
-          
-        </li>-->
-      </ul>
+              <p class="todo-title">Tasks to do</p>
+              <ul class="todolist" id="todolist" class="todo-button">
+                  <!--<li>added item
+                    <div class="buttons">
+                        <button id="remove" class="remove1">Remove</button>  
+                        <button id="done" class="complete1">Done</button>
+                    </div>
+                </li>-->
+              </ul>
+
+
+              <p class="todo-title">Tasks completed</p>
+              <ul class="todolist" id="done">
+                <!--<li>
+
+                </li>-->
+              </ul>
+        </div>
+    </div>
 
 
 

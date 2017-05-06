@@ -18,7 +18,8 @@ document.addEventListener("keyup", function(evt) {
     
     if (evt.keyCode === 13) {
         
-        var value = document.getElementById("add-text").value;  
+        var value = document.getElementById("add-text").value; 
+        
         if (value) {
             addItem(value);
             document.getElementById("add-text").value = '';
@@ -38,6 +39,16 @@ function removeItem() {
 }
 
 
+// zadania zrobione
+function completedItem(){
+    
+    var tasksComplete = document.querySelector("#done");
+    var item = this.parentNode.parentNode;
+    
+    tasksComplete.appendChild(item);
+    this.style.display = "none";
+
+}
 
 // Dodanie nowych elementow do listy
 function addItem(text) {
@@ -54,6 +65,7 @@ function addItem(text) {
     remove.innerHTML = "Usuń";
     
     
+    // wywołanie zdarzenia usuniecia elementu
     remove.addEventListener("click", removeItem);
     
     var complete = document.createElement("button"); // tworzenie elemnutu button
@@ -61,7 +73,9 @@ function addItem(text) {
     complete.innerHTML = "Skończone";
     
     
-    complete.addEventListener("click", completedTasks);
+     // wywołanie zdarzenia zrobionego zadania
+    complete.addEventListener("click", completedItem);
+    
     
     buttons.appendChild(remove); //dodanie zmiennej remove do zmiennej buttons czyli
     buttons.appendChild(complete); //dodanie zmiennej rcomplete do zmiennej buttons czyli 
@@ -72,30 +86,6 @@ function addItem(text) {
 }
 
 
-function back() {
-    var create = document.createElement("div");
-    var list = document.getElementById("todolist");
-    
-    create.classList.add("active");
-    create.textContent = "elo";
-    
-    list.appendChild(create);
-    
-}
-var tasksComplete = document.querySelector("#done");
 
 
-function completedTasks(){
 
-    
-    
-    var item = this.parentNode.parentNode;
-    
-    
-    tasksComplete.appendChild(item);
-    
-    
-   
-   this.style.display = "none";
-
-}
