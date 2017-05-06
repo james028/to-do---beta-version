@@ -52,7 +52,8 @@ function completedItem(){
     var item = this.parentNode.parentNode;
     
     tasksComplete.appendChild(item);
-    this.style.display = "none";
+    this.style.color = "green";
+
 
 }
 

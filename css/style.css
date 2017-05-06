@@ -30,11 +30,10 @@ body
     display: flex;
     background: #DB4437;
     padding: 10px;
-    border-radius: 5px;
 }
 .todo-input
 {
-    flex-basis: 80%;
+    width: 75%;
     height: 80%;
     margin: auto;
     background: #E06055;
@@ -82,7 +81,7 @@ body
     font-weight: 500;
     position: relative;
     background: #ffffff;
-    padding: 12px 0 5px 25px;
+    padding: 14px 0 5px 25px;
 
     
 }
@@ -93,7 +92,8 @@ body
     height: 50px;
     position: absolute;
     right: 2%;
-    margin-top: -12px;
+    top: 2%;
+
     
 }
  ul li .divs .remove1, li .divs .complete1
