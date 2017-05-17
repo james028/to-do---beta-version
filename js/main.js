@@ -53,6 +53,9 @@ function completedItem(){
     
     tasksComplete.appendChild(item);
     this.style.color = "green";
+    
+    item.style.background = "#D2B48C";
+    item.style.color = "#2F4F4F";
 
 
 }
@@ -88,8 +91,8 @@ function addItem(text) {
     buttons.appendChild(complete); //dodanie zmiennej rcomplete do zmiennej buttons czyli 
     item.appendChild(buttons); //dodanie diva buttons do listy li
     
-    list.appendChild(item); //dodanie listy li do listy ul zobaczyc inne rozwiazanie
-    
+    //list.appendChild(item); //dodanie listy li do listy ul zobaczyc inne rozwiazanie
+    list.insertBefore(item,list.childNodes[0]);
 }
 
 
