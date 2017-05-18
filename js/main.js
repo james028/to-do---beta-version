@@ -1,6 +1,6 @@
+
 var removeicon = '<i class="fa fa-trash-o" aria-hidden="true"></i>';
 var completeicon = '<i class="fa fa-check-circle-o" aria-hidden="true"></i>';
-
 
 
 
@@ -13,9 +13,7 @@ document.getElementById("add").addEventListener("click", function() {
         document.getElementById("add-text").value = '';
     }
     
-    //back();
 }, false);
-
 
 
 
@@ -31,7 +29,6 @@ document.addEventListener("keyup", function(evt) {
             document.getElementById("add-text").value = '';
         }
     }
-    
     
 }, false);
 
@@ -54,7 +51,7 @@ function completedItem(){
     tasksComplete.appendChild(item);
     this.style.color = "green";
     
-    item.style.background = "#D2B48C";
+    item.style.background = "#95a5a6";
     item.style.color = "#2F4F4F";
 
 
@@ -64,22 +61,23 @@ function completedItem(){
 function addItem(text) {
     var list = document.getElementById("todolist");
     
-    var item = document.createElement("li"); //tworzenie elementu li
+    //tworzenie nowych elementow
+    var item = document.createElement("li");
     item.innerText = text;
     
-    var buttons = document.createElement("div"); //tworzenie elementu div
-    buttons.classList.add("divs"); //dodanie klasy buttons do stworzonego elementu div
+    var buttons = document.createElement("div"); 
+    buttons.classList.add("divs"); 
     
-    var remove = document.createElement("div");// tworzenie elemnutu button
-    remove.classList.add("remove1"); //dodanie klasy remove do stworzonego elementu button
+    var remove = document.createElement("div");
+    remove.classList.add("remove1"); 
     remove.innerHTML = removeicon;
     
     
     // wywołanie zdarzenia usuniecia elementu
     remove.addEventListener("click", removeItem);
     
-    var complete = document.createElement("div"); // tworzenie elemnutu button
-    complete.classList.add("complete1");  //dodanie klasy complete do stworzonego elementu button
+    var complete = document.createElement("div"); 
+    complete.classList.add("complete1");  
     complete.innerHTML = completeicon;
     
     
@@ -87,11 +85,11 @@ function addItem(text) {
     complete.addEventListener("click", completedItem);
     
     
-    buttons.appendChild(remove); //dodanie zmiennej remove do zmiennej buttons czyli
-    buttons.appendChild(complete); //dodanie zmiennej rcomplete do zmiennej buttons czyli 
-    item.appendChild(buttons); //dodanie diva buttons do listy li
+    //dodanie nowych węzłow na koniec listy
+    buttons.appendChild(remove); 
+    buttons.appendChild(complete); 
+    item.appendChild(buttons);
     
-    //list.appendChild(item); //dodanie listy li do listy ul zobaczyc inne rozwiazanie
     list.insertBefore(item,list.childNodes[0]);
 }
 
