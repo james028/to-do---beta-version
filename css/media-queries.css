@@ -16,7 +16,16 @@
     {
         position: absolute;
         top: 50%;
-        left: 90%;
+        right: -7%;
         transform: translate(-50%, -50%); 
+    }
+}
+
+@media (max-width: 580px) {
+    ul li .divs {
+        position: absolute;
+        top: 50%;
+        right: -9%;
+        transform: translate(-50%, -50%);
     }
 }
