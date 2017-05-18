@@ -57,7 +57,7 @@ function completedItem(){
 
 }
 
-// Dodanie nowych elementow do listy
+// Dodanie nowych elementow 
 function addItem(text) {
     var list = document.getElementById("todolist");
     

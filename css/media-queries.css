@@ -1,4 +1,4 @@
-@media (max-width: 640px) {
+@media (max-width: 700px) {
     .container
     {
     width: 100%;
@@ -12,5 +12,11 @@
     {
         border-radius: none;
     }
-
+    ul li .divs
+    {
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        transform: translate(-50%, -50%); 
+    }
 }
