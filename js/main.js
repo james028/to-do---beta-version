@@ -35,6 +35,7 @@ document.addEventListener("keyup", function(evt) {
 
 //usuwanie elementow
 function removeItem() {
+    
     var item = this.parentNode.parentNode;
     var parent = item.parentNode;
     

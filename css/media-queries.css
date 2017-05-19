@@ -12,20 +12,33 @@
     {
         border-radius: none;
     }
+    
+}
+
+@media (min-width: 490px) and (max-width: 700px) {
+    ul li
+    {
+        position: relative;
+    }
     ul li .divs
     {
         position: absolute;
         top: 50%;
-        right: -7%;
+        left: 90%;
         transform: translate(-50%, -50%); 
     }
 }
 
-@media (max-width: 580px) {
-    ul li .divs {
+@media (max-width: 489px) {
+    ul li
+    {
+        position: relative;
+    }
+    ul li .divs
+    {
         position: absolute;
         top: 50%;
-        right: -9%;
-        transform: translate(-50%, -50%);
+        left: 87%;
+        transform: translate(-50%, -50%); 
     }
 }
